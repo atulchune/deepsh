@@ -1,95 +1,67 @@
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&family=Inter:wght@300;400;500;600&display=swap');
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
-/* Definition of the design system. All colors, gradients, fonts, etc should be defined here. 
-All colors MUST be HSL.
-*/
-
 @layer base {
   :root {
-    --background: 0 0% 100%;
-    --foreground: 222.2 84% 4.9%;
+    --background: 36 33% 98%;
+    --foreground: 20 10% 15%;
 
-    --card: 0 0% 100%;
-    --card-foreground: 222.2 84% 4.9%;
+    --card: 36 30% 96%;
+    --card-foreground: 20 10% 15%;
 
-    --popover: 0 0% 100%;
-    --popover-foreground: 222.2 84% 4.9%;
+    --popover: 36 33% 98%;
+    --popover-foreground: 20 10% 15%;
 
-    --primary: 222.2 47.4% 11.2%;
-    --primary-foreground: 210 40% 98%;
+    --primary: 38 45% 55%;
+    --primary-foreground: 36 33% 98%;
 
-    --secondary: 210 40% 96.1%;
-    --secondary-foreground: 222.2 47.4% 11.2%;
+    --secondary: 36 20% 92%;
+    --secondary-foreground: 20 10% 25%;
 
-    --muted: 210 40% 96.1%;
-    --muted-foreground: 215.4 16.3% 46.9%;
+    --muted: 36 15% 90%;
+    --muted-foreground: 20 8% 45%;
 
-    --accent: 210 40% 96.1%;
-    --accent-foreground: 222.2 47.4% 11.2%;
+    --accent: 350 40% 85%;
+    --accent-foreground: 350 30% 25%;
 
     --destructive: 0 84.2% 60.2%;
     --destructive-foreground: 210 40% 98%;
 
-    --border: 214.3 31.8% 91.4%;
-    --input: 214.3 31.8% 91.4%;
-    --ring: 222.2 84% 4.9%;
+    --border: 36 20% 88%;
+    --input: 36 20% 88%;
+    --ring: 38 45% 55%;
 
-    --radius: 0.5rem;
+    --radius: 0.75rem;
+
+    /* Custom tokens */
+    --gold: 38 45% 55%;
+    --gold-light: 38 50% 75%;
+    --gold-glow: 38 60% 65%;
+    --rose: 350 40% 85%;
+    --rose-deep: 350 45% 70%;
+    --cream: 36 33% 98%;
+    --cream-dark: 36 25% 92%;
+    --charcoal: 20 10% 15%;
+    --charcoal-light: 20 8% 35%;
+    --glass: 36 33% 98%;
+
+    --font-serif: 'Cormorant Garamond', Georgia, serif;
+    --font-sans: 'Inter', system-ui, sans-serif;
+
+    --shadow-romantic: 0 20px 60px -15px hsla(38, 45%, 55%, 0.25);
+    --shadow-soft: 0 10px 40px -10px hsla(20, 10%, 15%, 0.1);
+    --shadow-glow: 0 0 40px hsla(38, 45%, 55%, 0.3);
 
     --sidebar-background: 0 0% 98%;
-
     --sidebar-foreground: 240 5.3% 26.1%;
-
     --sidebar-primary: 240 5.9% 10%;
-
     --sidebar-primary-foreground: 0 0% 98%;
-
     --sidebar-accent: 240 4.8% 95.9%;
-
     --sidebar-accent-foreground: 240 5.9% 10%;
-
     --sidebar-border: 220 13% 91%;
-
-    --sidebar-ring: 217.2 91.2% 59.8%;
-  }
-
-  .dark {
-    --background: 222.2 84% 4.9%;
-    --foreground: 210 40% 98%;
-
-    --card: 222.2 84% 4.9%;
-    --card-foreground: 210 40% 98%;
-
-    --popover: 222.2 84% 4.9%;
-    --popover-foreground: 210 40% 98%;
-
-    --primary: 210 40% 98%;
-    --primary-foreground: 222.2 47.4% 11.2%;
-
-    --secondary: 217.2 32.6% 17.5%;
-    --secondary-foreground: 210 40% 98%;
-
-    --muted: 217.2 32.6% 17.5%;
-    --muted-foreground: 215 20.2% 65.1%;
-
-    --accent: 217.2 32.6% 17.5%;
-    --accent-foreground: 210 40% 98%;
-
-    --destructive: 0 62.8% 30.6%;
-    --destructive-foreground: 210 40% 98%;
-
-    --border: 217.2 32.6% 17.5%;
-    --input: 217.2 32.6% 17.5%;
-    --ring: 212.7 26.8% 83.9%;
-    --sidebar-background: 240 5.9% 10%;
-    --sidebar-foreground: 240 4.8% 95.9%;
-    --sidebar-primary: 224.3 76.3% 48%;
-    --sidebar-primary-foreground: 0 0% 100%;
-    --sidebar-accent: 240 3.7% 15.9%;
-    --sidebar-accent-foreground: 240 4.8% 95.9%;
-    --sidebar-border: 240 3.7% 15.9%;
     --sidebar-ring: 217.2 91.2% 59.8%;
   }
 }
@@ -101,5 +73,146 @@ All colors MUST be HSL.
 
   body {
     @apply bg-background text-foreground;
+    font-family: var(--font-sans);
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    overflow-x: hidden;
   }
+
+  h1, h2, h3, h4, h5, h6 {
+    font-family: var(--font-serif);
+    letter-spacing: -0.03em;
+  }
+}
+
+@layer components {
+  .font-serif {
+    font-family: var(--font-serif);
+  }
+
+  .font-sans {
+    font-family: var(--font-sans);
+  }
+
+  .text-gold {
+    color: hsl(var(--gold));
+  }
+
+  .text-charcoal {
+    color: hsl(var(--charcoal));
+  }
+
+  .text-charcoal-light {
+    color: hsl(var(--charcoal-light));
+  }
+
+  .bg-cream {
+    background-color: hsl(var(--cream));
+  }
+
+  .bg-cream-dark {
+    background-color: hsl(var(--cream-dark));
+  }
+
+  .bg-gold {
+    background-color: hsl(var(--gold));
+  }
+
+  .bg-rose {
+    background-color: hsl(var(--rose));
+  }
+
+  .shadow-romantic {
+    box-shadow: var(--shadow-romantic);
+  }
+
+  .shadow-soft {
+    box-shadow: var(--shadow-soft);
+  }
+
+  .shadow-glow {
+    box-shadow: var(--shadow-glow);
+  }
+
+  .glass-bg {
+    background-color: hsla(var(--glass), 0.7);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+  }
+
+  .cinematic-section {
+    @apply relative min-h-screen flex items-center justify-center py-24 px-6;
+  }
+
+  .story-image {
+    @apply overflow-hidden shadow-romantic;
+    border-radius: 24px;
+  }
+
+  .story-image-container {
+    border-radius: 32px;
+    padding: 1rem;
+  }
+
+  .destiny-line {
+    width: 1px;
+    background: linear-gradient(
+      to bottom,
+      transparent,
+      hsl(var(--gold)),
+      hsl(var(--gold)),
+      transparent
+    );
+  }
+
+  .text-balance {
+    text-wrap: balance;
+  }
+
+  .gradient-gold {
+    background: linear-gradient(135deg, hsl(var(--gold)), hsl(var(--gold-glow)));
+  }
+
+  .gradient-rose {
+    background: linear-gradient(135deg, hsl(var(--rose)), hsl(var(--rose-deep)));
+  }
+
+  .loading-screen {
+    @apply fixed inset-0 z-50 flex items-center justify-center;
+    background-color: hsl(var(--cream));
+  }
+}
+
+@layer utilities {
+  .tracking-story {
+    letter-spacing: 0.05em;
+  }
+
+  .tracking-tight-story {
+    letter-spacing: -0.03em;
+  }
+
+  .max-w-prose-story {
+    max-width: 45ch;
+  }
+}
+
+/* Scrollbar styling */
+::-webkit-scrollbar {
+  width: 4px;
+}
+
+::-webkit-scrollbar-track {
+  background: hsl(var(--cream));
+}
+
+::-webkit-scrollbar-thumb {
+  background: hsl(var(--gold));
+  border-radius: 2px;
+}
+
+/* Selection color */
+::selection {
+  background-color: hsla(var(--gold), 0.3);
+  color: hsl(var(--charcoal));
 }
