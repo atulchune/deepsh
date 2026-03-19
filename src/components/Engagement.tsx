@@ -1,6 +1,6 @@
 import { motion } from 'framer-motion';
 import { Heart } from 'lucide-react';
-import engagementImg from '@/assets/engagement.jpg';
+import sd11 from '@/assets/sd11.png';
 
 const cinematicTransition = {
   initial: { opacity: 0, y: 30, filter: "blur(10px)" },
@@ -23,9 +23,9 @@ const Engagement = () => {
               <Heart className="text-primary" size={32} fill="currentColor" />
             </div>
           </motion.div>
-          <span className="font-serif italic text-primary text-xl block mb-4">December 2023</span>
+          <span className="font-serif italic text-primary text-xl block mb-4">2 November 2025</span>
           <h2 className="text-4xl md:text-6xl font-serif font-light text-foreground text-balance">
-            She Said Yes
+            Our Engagement 💍
           </h2>
         </motion.div>
 
@@ -34,9 +34,9 @@ const Engagement = () => {
           transition={{ ...cinematicTransition.transition, delay: 0.3 }}
           className="story-image-container max-w-4xl mx-auto"
         >
-          <div className="relative aspect-video story-image overflow-hidden">
+          <div className="relative aspect-[3/4] md:aspect-video story-image overflow-hidden">
             <motion.img
-              src={engagementImg}
+              src={sd11}
               alt="Engagement"
               className="object-cover w-full h-full"
               initial={{ scale: 1.15 }}
@@ -53,9 +53,9 @@ const Engagement = () => {
           transition={{ ...cinematicTransition.transition, delay: 0.5 }}
           className="text-center text-muted-foreground leading-relaxed text-lg font-sans max-w-prose-story mx-auto mt-12 tracking-story"
         >
-          With trembling hands and a heart full of love, he asked the question
-          that would change their lives forever. And she said yes — with tears of joy
-          and a smile that outshone every star.
+          The day two strangers became one story. Our engagement day was not just a ceremony —
+          it was the first time we looked into each other's eyes and knew that destiny had
+          something beautiful planned for us.
         </motion.p>
       </div>
     </section>

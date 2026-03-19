@@ -1,5 +1,5 @@
 import { motion } from 'framer-motion';
-import firstMeetingImg from '@/assets/first-meeting.jpg';
+import sd11 from '@/assets/sd11.png';
 
 const cinematicTransition = {
   initial: { opacity: 0, y: 30, filter: "blur(10px)" },
@@ -18,8 +18,8 @@ const FirstMeeting = () => {
         >
           <div className="relative aspect-[4/5] story-image overflow-hidden">
             <motion.img
-              src={firstMeetingImg}
-              alt="The First Meeting"
+              src={sd11}
+              alt="The First Meeting - Engagement Day"
               className="object-cover w-full h-full"
               initial={{ scale: 1.15 }}
               whileInView={{ scale: 1 }}
@@ -35,13 +35,14 @@ const FirstMeeting = () => {
           transition={{ ...cinematicTransition.transition, delay: 0.2 }}
           className="space-y-6"
         >
-          <span className="font-serif italic text-primary text-xl">12 March 2021</span>
+          <span className="font-serif italic text-primary text-xl">2 November 2025</span>
           <h2 className="text-4xl md:text-5xl font-serif font-light text-foreground leading-tight text-balance">
             The First Time<br />We Met
           </h2>
           <p className="text-muted-foreground leading-relaxed text-lg font-sans max-w-prose-story tracking-story">
-            In a crowded room, the world went quiet. A single glance that felt like
-            a thousand conversations already had. That moment changed everything.
+            We first met on our engagement day — before that, we had never seen each other.
+            That beautiful moment marked the beginning of our journey together. Two strangers,
+            one destiny, and a bond that was written in the stars.
           </p>
           <div className="h-px w-24 bg-primary opacity-40" />
         </motion.div>

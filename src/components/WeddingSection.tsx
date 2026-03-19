@@ -1,6 +1,6 @@
 import { motion } from 'framer-motion';
 import { Sparkles } from 'lucide-react';
-import weddingImg from '@/assets/wedding.jpg';
+import sd21 from '@/assets/sd21.png';
 
 const cinematicTransition = {
   initial: { opacity: 0, y: 30, filter: "blur(10px)" },
@@ -15,7 +15,7 @@ const WeddingSection = () => {
       {/* Full bleed background */}
       <div className="absolute inset-0">
         <motion.img
-          src={weddingImg}
+          src={sd21}
           alt="The Wedding"
           className="w-full h-full object-cover"
           initial={{ scale: 1.1 }}
@@ -58,7 +58,7 @@ const WeddingSection = () => {
           className="mb-6"
         >
           <span className="font-sans text-sm tracking-story uppercase" style={{ color: 'hsl(38, 50%, 75%)' }}>
-            The Grand Celebration
+            14 May 2026 — The Grand Celebration
           </span>
         </motion.div>
 
@@ -77,12 +77,23 @@ const WeddingSection = () => {
           className="font-serif italic text-2xl md:text-3xl mt-6"
           style={{ color: 'hsl(38, 50%, 75%)' }}
         >
-          Forever Begins
+          Forever Begins 💍
+        </motion.p>
+
+        <motion.p
+          {...cinematicTransition}
+          transition={{ ...cinematicTransition.transition, delay: 0.8 }}
+          className="mt-8 text-base md:text-lg max-w-2xl mx-auto leading-relaxed"
+          style={{ color: 'hsl(36, 33%, 85%)' }}
+        >
+          The day our hearts become one and our souls promise forever.
+          From strangers to soulmates, our journey now turns into a forever story —
+          hand in hand, heart to heart, always and forever.
         </motion.p>
 
         <motion.div
           {...cinematicTransition}
-          transition={{ ...cinematicTransition.transition, delay: 0.9 }}
+          transition={{ ...cinematicTransition.transition, delay: 1 }}
           className="mt-12"
         >
           <div className="h-px w-32 mx-auto" style={{ background: 'linear-gradient(to right, transparent, hsl(38,50%,75%), transparent)' }} />

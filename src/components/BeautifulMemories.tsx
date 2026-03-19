@@ -1,10 +1,8 @@
 import { motion } from 'framer-motion';
-import memory1 from '@/assets/memory-1.jpg';
-import memory2 from '@/assets/memory-2.jpg';
-import memory3 from '@/assets/memory-3.jpg';
-import memory4 from '@/assets/memory-4.jpg';
-import engagementImg from '@/assets/engagement.jpg';
-import firstMeetingImg from '@/assets/first-meeting.jpg';
+import sd1 from '@/assets/sd1.png';
+import sd11 from '@/assets/sd11.png';
+import sd21 from '@/assets/sd21.png';
+import sd1Special from '@/assets/sd1-special.jpg';
 
 const cinematicTransition = {
   initial: { opacity: 0, y: 30, filter: "blur(10px)" },
@@ -14,12 +12,10 @@ const cinematicTransition = {
 };
 
 const images = [
-  { src: memory1, alt: 'Beautiful Moment 1', span: 'row-span-2' },
-  { src: memory2, alt: 'Beautiful Moment 2', span: '' },
-  { src: memory3, alt: 'Beautiful Moment 3', span: 'row-span-2' },
-  { src: memory4, alt: 'Beautiful Moment 4', span: '' },
-  { src: engagementImg, alt: 'Beautiful Moment 5', span: '' },
-  { src: firstMeetingImg, alt: 'Beautiful Moment 6', span: '' },
+  { src: sd11, alt: 'Garden Romance', span: 'row-span-2' },
+  { src: sd1, alt: 'Together Forever', span: '' },
+  { src: sd21, alt: 'Beach Sunset', span: 'row-span-2' },
+  { src: sd1Special, alt: 'Magical Moment', span: '' },
 ];
 
 const BeautifulMemories = () => {
@@ -35,7 +31,7 @@ const BeautifulMemories = () => {
           </h2>
         </motion.div>
 
-        <div className="grid grid-cols-2 md:grid-cols-3 gap-4 md:gap-6 auto-rows-[200px] md:auto-rows-[250px]">
+        <div className="grid grid-cols-2 md:grid-cols-2 gap-4 md:gap-6 auto-rows-[200px] md:auto-rows-[300px]">
           {images.map((image, index) => (
             <motion.div
               key={image.alt}

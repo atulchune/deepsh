@@ -1,6 +1,6 @@
 import { motion } from 'framer-motion';
-import { Phone } from 'lucide-react';
-import firstCallImg from '@/assets/first-call.jpg';
+import { MessageCircle } from 'lucide-react';
+import sd21 from '@/assets/sd21.png';
 
 const cinematicTransition = {
   initial: { opacity: 0, y: 30, filter: "blur(10px)" },
@@ -20,19 +20,21 @@ const FirstCall = () => {
         >
           <div className="flex items-center gap-3">
             <motion.div
-              animate={{ rotate: [0, 15, -15, 15, 0] }}
-              transition={{ duration: 1.5, repeat: Infinity, repeatDelay: 3 }}
+              animate={{ scale: [1, 1.15, 1] }}
+              transition={{ duration: 2, repeat: Infinity, repeatDelay: 2 }}
             >
-              <Phone className="text-primary" size={24} />
+              <MessageCircle className="text-primary" size={24} />
             </motion.div>
-            <span className="font-serif italic text-primary text-xl">18 March 2021</span>
+            <span className="font-serif italic text-primary text-xl">23 November 2025</span>
           </div>
           <h2 className="text-4xl md:text-5xl font-serif font-light text-foreground leading-tight text-balance">
-            The First Call
+            The First Conversations
           </h2>
           <p className="text-muted-foreground leading-relaxed text-lg font-sans max-w-prose-story tracking-story">
-            Hours felt like minutes. Words flowed like poetry neither had rehearsed.
-            That night, two souls discovered they spoke the same language of the heart.
+            On 23rd November, we started talking on WhatsApp and calls — this became
+            the second step of our journey together. Hours felt like minutes, words flowed
+            like poetry neither had rehearsed. That night, two souls discovered they spoke
+            the same language of the heart.
           </p>
           <div className="h-px w-24 bg-primary opacity-40" />
         </motion.div>
@@ -43,8 +45,8 @@ const FirstCall = () => {
         >
           <div className="relative aspect-[4/5] story-image overflow-hidden">
             <motion.img
-              src={firstCallImg}
-              alt="The First Call"
+              src={sd21}
+              alt="Our Journey Begins"
               className="object-cover w-full h-full"
               initial={{ scale: 1.15 }}
               whileInView={{ scale: 1 }}
