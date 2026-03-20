@@ -13,9 +13,9 @@ const cinematicTransition = {
 
 const images = [
   { src: sd11, alt: 'Garden Romance', span: 'row-span-2' },
-  { src: sd1, alt: 'Together Forever', span: '' },
+  // { src: sd1, alt: 'Together Forever', span: '' },
   { src: sd21, alt: 'Beach Sunset', span: 'row-span-2' },
-  { src: sd1Special, alt: 'Magical Moment', span: '' },
+  // { src: sd1Special, alt: 'Magical Moment', span: '' },
 ];
 
 const BeautifulMemories = () => {

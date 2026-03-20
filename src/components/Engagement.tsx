@@ -1,6 +1,6 @@
 import { motion } from 'framer-motion';
 import { Heart } from 'lucide-react';
-import sd11 from '@/assets/sd11.png';
+import sdhand1 from '@/assets/sdhand1.jpg';
 
 const cinematicTransition = {
   initial: { opacity: 0, y: 30, filter: "blur(10px)" },
@@ -36,7 +36,7 @@ const Engagement = () => {
         >
           <div className="relative aspect-[3/4] md:aspect-video story-image overflow-hidden">
             <motion.img
-              src={sd11}
+              src={sdhand1}
               alt="Engagement"
               className="object-cover w-full h-full"
               initial={{ scale: 1.15 }}

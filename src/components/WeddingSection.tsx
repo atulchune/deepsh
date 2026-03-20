@@ -1,6 +1,6 @@
 import { motion } from 'framer-motion';
 import { Sparkles } from 'lucide-react';
-import sd21 from '@/assets/sd21.png';
+import sd21_crop from '@/assets/sd21_crop.png';
 
 const cinematicTransition = {
   initial: { opacity: 0, y: 30, filter: "blur(10px)" },
@@ -15,9 +15,9 @@ const WeddingSection = () => {
       {/* Full bleed background */}
       <div className="absolute inset-0">
         <motion.img
-          src={sd21}
+          src={sd21_crop}
           alt="The Wedding"
-          className="w-full h-full object-cover"
+          className="w-full h-full object-cover object-top"
           initial={{ scale: 1.1 }}
           whileInView={{ scale: 1 }}
           viewport={{ once: false }}

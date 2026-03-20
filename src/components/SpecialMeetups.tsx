@@ -1,6 +1,6 @@
 import { motion } from 'framer-motion';
 import { Heart, Sparkles } from 'lucide-react';
-import sd1Special from '@/assets/sd1-special.jpg';
+import sdpro from '@/assets/sdpro.png';
 
 const cinematicTransition = {
   initial: { opacity: 0, y: 30, filter: "blur(10px)" },
@@ -29,7 +29,7 @@ const SpecialMeetups = () => {
           >
             <div className="relative aspect-[3/4] story-image overflow-hidden">
               <motion.img
-                src={sd1Special}
+                src={sdpro}
                 alt="The Special Moment"
                 className="object-cover w-full h-full"
                 initial={{ scale: 1.15 }}
